@@ -1,10 +1,12 @@
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 using Discord;
 using Discord.Commands;
+using Discord.WebSocket;
 
 namespace QueueBot
 {
@@ -13,6 +15,7 @@ namespace QueueBot
         Queues _q = Program.qs;
         Config config = new Config();
         private CommandService cmd = CommandHandler._commands;
+        private string[] bugs = File.ReadAllLines("bugreports.txt");
 
         [Command("prefix")]
         [Summary("Shows the prefix if you've forgotten *(meant to be used with an @-mention)*")][Remarks("public")]
@@ -118,6 +121,25 @@ namespace QueueBot
                 .WithColor(new Color(114, 137, 218))
                 .Build();
             await ReplyAsync("", embed: embed);
+        }
+
+        [Command("reportbug")]
+        [Summary("Allows user to send a report to bot owner")]
+        [Remarks("public")]
+        public async Task ReportBug([Remainder, Summary("Bug to be reported")] string bug)
+        {
+            var application = await Context.Client.GetApplicationInfoAsync();
+            var owner = application.Owner;
+            var em = new EmbedBuilder().WithTitle($"Bug report from {Context.User.Username}")
+                .WithDescription(bug)
+                .WithThumbnailUrl(Context.User.GetAvatarUrl())
+                .WithColor(new Color(255, 0, 0))
+                .WithCurrentTimestamp();
+            await owner.CreateDMChannelAsync().Result.SendMessageAsync("", embed: em);
+            LinkedList<string> allbugs = new LinkedList<string>(bugs.ToAsyncEnumerable() as IEnumerable<string>);
+            allbugs.AddLast(bug);
+            await ReplyAsync(":thumbsup: Your bug report has been recieved and will be looked at");
+            File.WriteAllLines("bugreports.txt", allbugs);
         }
     }
 }
