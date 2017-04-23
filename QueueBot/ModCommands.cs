@@ -39,8 +39,7 @@ namespace QueueBot
         [Command("qclean")]
         [Summary("Removes all messages by the bot in the last up to 100 messages")][Remarks("moderator")]
         [RequireUserPermission(ChannelPermission.ManageMessages)]
-        [RequireBotPermission(ChannelPermission.ManageMessages)]
-        public async Task QClean(int count = 100)
+          public async Task QClean(int count = 100)
         {
             if (count < 1)
                 return;
