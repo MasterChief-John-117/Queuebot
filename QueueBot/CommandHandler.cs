@@ -42,7 +42,10 @@ namespace QueueBot
 
             // If the command failed, notify the user
             if (!result.IsSuccess)
-                await message.Channel.SendMessageAsync($"**Error:** {result.ErrorReason}");
+            	{
+            		if (result.ErrorReason == "Command can only be run by the owner of the bot") return;
+                	await message.Channel.SendMessageAsync($"**Error:** {result.ErrorReason}");
+            	}
+            }
         }
     }
-}
