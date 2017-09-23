@@ -13,7 +13,6 @@ namespace QueueBot
     {
         public static int Runtimes = Convert.ToInt32(File.ReadAllText("runtimes.txt")) + 1;
         public static Queues qs = new Queues();
-        public static int code = new Random().Next(1000,9999);
 
 
         // Convert our sync main to an async main.
@@ -26,7 +25,6 @@ namespace QueueBot
 
         public async Task Start()
         {
-            Console.WriteLine(code.ToString());
             File.WriteAllText("runtimes.txt", Runtimes.ToString());
             // Define the DiscordSocketClient
             _client = new DiscordSocketClient(new DiscordSocketConfig

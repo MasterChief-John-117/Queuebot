@@ -75,7 +75,7 @@ namespace QueueBot
             	{
 	                if (!result.ErrorReason.Contains("suppress"))
 	                {
-	                    Console.WriteLine($"**Error:** {result.ErrorReason}");
+	                    await message.Channel.SendMessageAsync($"**Error:** {result.ErrorReason}");
 	                }
 	            }
             }

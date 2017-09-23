@@ -23,36 +23,12 @@ namespace QueueBot
         private CommandHandler cmd = new CommandHandler();
         private Utilities utils = new Utilities();
 
-        [Command("kill")]
-        public async Task Kill(int i)
-        {
-            string ownerId = Context.Client.GetApplicationInfoAsync().Result.Owner.Id.ToString();
-            List<string> contributors =
-                JsonConvert.DeserializeObject<List<String>>(File.ReadAllText("contributors.json"));
-
-            if (!Context.User.Id.ToString().Equals(ownerId) &&
-                !contributors.Contains(Context.User.Id.ToString())) return;
-            
-            if (i != Program.code) return;
-
-            await ReplyAsync("Disconnecting!");
-            await Task.Delay(500);
-            Environment.Exit(0);
-                        
-        }
-
         // generic say hello -> hello
         [Command("say"), Summary("Echos a message.")]
         [Priority(int.MaxValue)]
+        [RequireOwner]
         public async Task Say([Remainder, Summary("The text to echo")] string echo)
         {
-            string ownerId = Context.Client.GetApplicationInfoAsync().Result.Owner.Id.ToString();
-            List<string> contributors =
-                JsonConvert.DeserializeObject<List<String>>(File.ReadAllText("contributors.json"));
-
-            if (!Context.User.Id.ToString().Equals(ownerId) &&
-                !contributors.Contains(Context.User.Id.ToString())) return;
-
             await Context.Message.DeleteAsync();
             if (echo.Length > 18)
             {
