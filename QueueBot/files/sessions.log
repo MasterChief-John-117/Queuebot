@@ -1,0 +1,60 @@
+[Info] 9/29/2017 4:19:29 PM: Discord.Net v1.0.2 (API v6)
+[Generic] 9/29/2017 4:21:28 PM: 
+[Info] 9/29/2017 4:21:28 PM: Discord.Net v1.0.2 (API v6)
+[Generic] 9/29/2017 4:23:21 PM: 
+[Info] 9/29/2017 4:23:21 PM: Discord.Net v1.0.2 (API v6)
+[Generic] 9/29/2017 4:24:50 PM: 
+[Info] 9/29/2017 4:24:50 PM: Discord.Net v1.0.2 (API v6)
+[Generic] 9/29/2017 4:25:43 PM: 
+[Info] 9/29/2017 4:25:43 PM: Discord.Net v1.0.2 (API v6)
+[Generic] 9/29/2017 4:26:24 PM: 
+[Info] 9/29/2017 4:26:24 PM: Discord.Net v1.0.2 (API v6)
+[Generic] 9/29/2017 4:26:43 PM: MjcwNDIzMDM2MzIxMDcxMTA0.DK33Yw.WJFtfFNB9hvJzKioLZsHG7BHNxY
+[Info] 9/29/2017 4:26:43 PM: Discord.Net v1.0.2 (API v6)
+[Verbose] 9/29/2017 4:26:43 PM: GET gateway/bot: 365.02 ms
+[Verbose] 9/29/2017 4:26:44 PM: GET voice/regions: 194.71 ms
+[Info] 9/29/2017 4:30:25 PM: Discord.Net v1.0.2 (API v6)
+[Verbose] 9/29/2017 4:30:25 PM: GET gateway/bot: 485.65 ms
+[Verbose] 9/29/2017 4:30:26 PM: GET voice/regions: 206.06 ms
+[Info] 9/29/2017 4:41:14 PM: Discord.Net v1.0.2 (API v6)
+[Verbose] 9/29/2017 4:41:15 PM: GET gateway/bot: 434.17 ms
+[Verbose] 9/29/2017 4:41:15 PM: GET voice/regions: 277.66 ms
+[Info] 9/29/2017 4:41:15 PM: Connecting
+[Debug] 9/29/2017 4:41:15 PM: Connecting ApiClient
+[Verbose] 9/29/2017 4:41:15 PM: GET gateway: 97.81 ms
+[Debug] 9/29/2017 4:41:16 PM: Identifying
+[Debug] 9/29/2017 4:41:16 PM: Sent Identify
+[Debug] 9/29/2017 4:41:16 PM: Received Hello
+[Debug] 9/29/2017 4:41:16 PM: Heartbeat Started
+[Debug] 9/29/2017 4:41:16 PM: Sent Heartbeat
+[Debug] 9/29/2017 4:41:16 PM: Received Dispatch (READY)
+[Debug] 9/29/2017 4:41:16 PM: GuildDownloader Started
+[Debug] 9/29/2017 4:41:16 PM: Sending Status
+[Debug] 9/29/2017 4:41:16 PM: Sent StatusUpdate
+[Debug] 9/29/2017 4:41:16 PM: Received Dispatch (GUILD_AVAILABLE)
+[Verbose] 9/29/2017 4:41:17 PM: Connected to Bot Home
+[Debug] 9/29/2017 4:41:17 PM: Received Dispatch (GUILD_AVAILABLE)
+[Verbose] 9/29/2017 4:41:17 PM: Connected to :^)
+[Debug] 9/29/2017 4:41:17 PM: Received Dispatch (GUILD_AVAILABLE)
+[Verbose] 9/29/2017 4:41:17 PM: Connected to r/CasualConversation
+[Debug] 9/29/2017 4:41:17 PM: Received HeartbeatAck
+[Debug] 9/29/2017 4:41:17 PM: GuildDownloader Stopped
+[Info] 9/29/2017 4:41:17 PM: Ready
+[Debug] 9/29/2017 4:41:17 PM: Latency = 672 ms
+[Debug] 9/29/2017 4:41:18 PM: Received Dispatch (PRESENCE_UPDATE)
+[Debug] 9/29/2017 4:41:19 PM: Received Dispatch (PRESENCE_UPDATE)
+[Debug] 9/29/2017 4:41:20 PM: Received Dispatch (PRESENCE_UPDATE)
+[Debug] 9/29/2017 4:41:21 PM: Received Dispatch (PRESENCE_UPDATE)
+[Info] 9/29/2017 4:41:21 PM: Connected
+[Debug] 9/29/2017 4:41:21 PM: Raising Event
+[Debug] 9/29/2017 4:41:22 PM: Received Dispatch (PRESENCE_UPDATE)
+[Debug] 9/29/2017 4:41:23 PM: Received Dispatch (PRESENCE_UPDATE)
+[Debug] 9/29/2017 4:41:24 PM: Received Dispatch (PRESENCE_UPDATE)
+[Debug] 9/29/2017 4:41:25 PM: Received Dispatch (PRESENCE_UPDATE)
+[Debug] 9/29/2017 4:41:25 PM: Received Dispatch (VOICE_STATE_UPDATE)
+[Debug] 9/29/2017 4:41:29 PM: Received Dispatch (PRESENCE_UPDATE)
+[Debug] 9/29/2017 4:41:29 PM: Received Dispatch (PRESENCE_UPDATE)
+[Debug] 9/29/2017 4:41:32 PM: Received Dispatch (PRESENCE_UPDATE)
+[Debug] 9/29/2017 4:41:32 PM: Received Dispatch (PRESENCE_UPDATE)
+[Debug] 9/29/2017 4:41:33 PM: Received Dispatch (PRESENCE_UPDATE)
+[Debug] 9/29/2017 4:41:33 PM: Received Dispatch (PRESENCE_UPDATE)
