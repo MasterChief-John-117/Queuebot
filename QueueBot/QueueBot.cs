@@ -47,7 +47,7 @@ namespace QueueBot
             await Task.Delay(-1);
         }
 
-        private IServiceProvider ConfigureServices()
+        private static IServiceProvider ConfigureServices()
         {
             var services = new ServiceCollection()
                 .AddSingleton(Client)
