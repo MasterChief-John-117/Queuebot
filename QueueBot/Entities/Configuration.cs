@@ -33,7 +33,7 @@ namespace QueueBot.Entities
 
         public Configuration GetConfiguration()
         {
-            tConfiguration configuration =
+            Configuration configuration =
                 JsonConvert.DeserializeObject<Configuration>(File.ReadAllText("files/globalConfiguration.json"));
             return configuration;
         }
