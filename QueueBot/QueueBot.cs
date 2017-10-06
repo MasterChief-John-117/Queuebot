@@ -22,6 +22,7 @@ namespace QueueBot
 
         static void Main(string[] args)
         {
+            Queues = new Dictionary<ulong, Queue>();
             Config = Config.GetConfiguration();
             Start().GetAwaiter().GetResult();
         }
@@ -30,14 +31,14 @@ namespace QueueBot
         {
             Client = new DiscordShardedClient(new DiscordSocketConfig
             {
-                LogLevel = LogSeverity.Debug,
+                LogLevel = LogSeverity.Verbose,
                 AlwaysDownloadUsers = true
             });
 
             Client.Log += Logger.LogClientMessage;
 
             await Client.LoginAsync(TokenType.Bot, Config.Token);
-            await Client.StartAsync();,
+            await Client.StartAsync();
 
             var serviceProvider = ConfigureServices();
 
@@ -64,7 +65,7 @@ namespace QueueBot
 
         public static Queue GetQueue(ulong guildId)
         {
-            if (Queues.Count < 1)
+            if (Queues is null)
             {
                 Queues = new Dictionary<ulong, Queue> {{guildId, new Queue()}};
                 return Queues[guildId];
