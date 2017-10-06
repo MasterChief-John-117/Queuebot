@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Net;
 using System.Net.NetworkInformation;
 using System.Threading.Tasks;
@@ -59,6 +60,24 @@ namespace QueueBot
                 }));
             var provider = new DefaultServiceProviderFactory().CreateServiceProvider(services);
             return provider;
+        }
+
+        public Queue GetQueue(ulong guildId)
+        {
+            if (Queues.Count < 1)
+            {
+                Queues = new Dictionary<ulong, Queue> {{guildId, new Queue()}};
+                return Queues[guildId];
+            }
+            else if (!Queues.ContainsKey(guildId))
+            {
+                Queues.Add(guildId, new Queue());
+                return Queues[guildId];
+            }
+            else
+            {
+                return Queues[guildId];
+            }
         }
     }
 }
