@@ -55,3 +55,4 @@ Temporary Items
 *.suo
 *.txt
 *[Cc]onfig*
+QueueBot/files/globalConfiguration.json
