@@ -62,7 +62,7 @@ namespace QueueBot
             return provider;
         }
 
-        public Queue GetQueue(ulong guildId)
+        public static Queue GetQueue(ulong guildId)
         {
             if (Queues.Count < 1)
             {
