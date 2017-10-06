@@ -7,7 +7,8 @@ namespace QueueBot.Entities
     {
         public IUser User;
         public string Song;
-        public Dictionary<ulong, int> GuildReputation;
+        //Will be used in the future
+        public Dictionary<ulong, int> GuildReputation = new Dictionary<ulong, int>{{0,0}};
 
         public QueueUser(IUser user)
         {
