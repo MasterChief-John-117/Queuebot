@@ -9,7 +9,7 @@ namespace QueueBot
 {
     public class CommandHandler
     {
-        private DiscordSocketClient _client;
+        private DiscordShardedClient _client;
         private IServiceProvider _map;
         private CommandService _commands;
 
@@ -17,7 +17,7 @@ namespace QueueBot
         {
             _map = map;
             // Create Command Service, inject it into Dependency Map
-            _client = map.GetService(typeof(DiscordSocketClient)) as DiscordSocketClient;
+            _client = map.GetService(typeof(DiscordShardedClient)) as DiscordShardedClient;
             _commands = new CommandService();
             await _commands.AddModulesAsync(Assembly.GetEntryAssembly());
 
